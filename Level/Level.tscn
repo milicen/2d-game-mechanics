@@ -1,0 +1,71 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Character/Character.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Camera/Camera2D.tscn" type="PackedScene" id=9]
+
+[sub_resource type="PhysicsMaterial" id=1]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 48.4713, 634.704 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 32.6881, 2.93967 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 172.073, 7.37178 )
+
+[node name="Level" type="Node2D"]
+
+[node name="Camera2D" parent="." instance=ExtResource( 9 )]
+
+[node name="Character" parent="." instance=ExtResource( 1 )]
+position = Vector2( 94.5419, 146.272 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+physics_material_override = SubResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+light_mask = 2
+position = Vector2( 323.451, 103.939 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D2"]
+light_mask = 2
+position = Vector2( -3.86733, 109.25 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D2"]
+light_mask = 2
+position = Vector2( 260.788, 116.732 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D2"]
+light_mask = 2
+position = Vector2( 110.92, 44.31 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="StaticBody2D2"]
+light_mask = 2
+position = Vector2( 213.676, -27.7813 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="StaticBody2D2"]
+light_mask = 2
+position = Vector2( 61.7227, -99.8228 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="StaticBody2D2"]
+light_mask = 2
+position = Vector2( 254.882, -190.179 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="StaticBody2D2"]
+light_mask = 2
+position = Vector2( 88.9535, -266.724 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2( 162.517, 172.197 )
+shape = SubResource( 4 )

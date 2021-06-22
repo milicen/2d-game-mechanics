@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Character/Character.gd" type="Script" id=7]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 77.6699, 149.533 )
+
+[node name="Character" type="KinematicBody2D"]
+scale = Vector2( 0.103, 0.107 )
+collision_layer = 2
+collision_mask = 2
+script = ExtResource( 7 )
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+scale = Vector2( 1, 1 )
+polygon = PoolVector2Array( -77.6699, -149.533, -77.6699, 149.533, 77.6699, 149.533, 77.6699, -149.533 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
